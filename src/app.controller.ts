@@ -7,6 +7,8 @@ import {
   Param,
   Put,
   Delete,
+  Options,
+  Head,
 } from '@nestjs/common';
 import { AppService } from './app.service';
 

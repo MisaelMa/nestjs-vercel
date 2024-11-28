@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule as ConfigModulePackage } from '@nestjs/config';
 import databaseConfig from '../../config/database.config';
-import configSchema from 'src/config/config.schema';
+import configSchema from '../../config/config.schema';
 @Module({
   imports: [
     ConfigModulePackage.forRoot({

@@ -16,4 +16,7 @@ export class Account {
 
   @Column()
   update_at: Date;
+
+  @Column({ nullable: true })
+  delete_at: Date;
 }

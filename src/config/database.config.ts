@@ -1,7 +1,8 @@
 import { registerAs } from '@nestjs/config';
+import { resolve } from 'path';
 import { DataSourceOptions } from 'typeorm';
 
-const postgresConfig = (): DataSourceOptions => {
+export const postgresConfig = (): DataSourceOptions => {
   return {
     type: 'postgres',
     host: process.env.DB_HOST,
@@ -10,6 +11,9 @@ const postgresConfig = (): DataSourceOptions => {
     password: process.env.DB_PASSWORD,
     database: process.env.DB_DATABASE,
     entities: [__dirname + '/../**/*.entity{.ts,.js}'],
+    migrations: [
+      resolve(__dirname, '..', 'core', 'database', 'migrations', '*{.ts,.js}'),
+    ],
     synchronize: true,
   };
 };

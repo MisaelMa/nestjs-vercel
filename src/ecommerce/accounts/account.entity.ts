@@ -13,7 +13,4 @@ export class Account {
 
   @Column()
   create_at: Date;
-
-  @Column()
-  update_at: Date;
 }

@@ -6,6 +6,6 @@ ConfigModule.forRoot({
   envFilePath: `.env`,
 });
 
-const AppDataSource = new DataSource(postgresConfig());
+export const dataSource = new DataSource(postgresConfig());
 
-export default AppDataSource;
+export default dataSource;
